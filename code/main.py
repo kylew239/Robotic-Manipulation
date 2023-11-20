@@ -217,7 +217,7 @@ def TrajectoryGenerator(Tsei: List[List[float]],
     for i in range(0, gripper_time):
         trajListRaw.append(currState)
 
-    # Trajectory 8: Move gripper back to standoff positio
+    # Trajectory 8: Move gripper back to standoff position
     temp = mr.ScrewTrajectory(Tscf_grasp,
                               Tscf_stand,
                               vert_time,
@@ -282,22 +282,22 @@ if __name__ == "__main__":
 
     # Part 2 testing
     Tsei = Tb0@M0e
-    Tsci = np.array([[1, 0, 0, 1],
-                     [0, 1, 0, 0],
+    Tsci = np.array([[1, 0, 0,     1],
+                     [0, 1, 0,     0],
                      [0, 0, 1, 0.025],
-                     [0, 0, 0, 1]])
-    Tscf = np.array([[0, 1, 0, 0],
-                     [-1, 0, 0, -1],
+                     [0, 0, 0,     1]])
+    Tscf = np.array([[0, 1, 0,     0],
+                     [-1, 0, 0,   -1],
                      [0, 0, 1, 0.025],
-                     [0, 0, 0, 1]])
+                     [0, 0, 0,     1]])
     Tce_grasp = np.array([[-0.707, 0,  0.707, 0.005],
-                          [     0, 1,      0, 0],
+                          [     0, 1,      0,     0],
                           [-0.707, 0, -0.707, -0.02],
-                          [     0, 0,      0, 1]])
+                          [     0, 0,      0,     1]])
     Tce_stand = np.array([[-0.707, 0,  0.707, 0.005],
-                          [     0, 1,      0, 0],
+                          [     0, 1,      0,     0],
                           [-0.707, 0, -0.707, 0.15],
-                          [     0, 0,      0, 1]])
+                          [     0, 0,      0,    1]])
 
     traj = TrajectoryGenerator(Tsei,
                                Tsci,
