@@ -44,7 +44,7 @@ This function returns the next robot state.
 
 To calculate the new position of the robot, I used the following equation 13.10 [2]:
 
-![mecanum]({{ site.url }}{{ site.baseurl }}/assets/images/449/mecanum_model.png)
+![mecanum](images/mecanum_model.png)
 
 Where:
 * r = radius of the wheel
@@ -58,7 +58,7 @@ Where:
 ## Feedforward Control
 Feedforwad control was achieved by using the current end-effector configuration as a function of the current chassis configuration and arm configuraiton. These values come directly from the simulation, so we assume perfect sensors and data. The control law, obtained from equation 13.37 [2], outputs the commanded end-effector twist, which is then converted into wheel and arm joint velocities
 
-![mecanum]({{ site.url }}{{ site.baseurl }}/assets/images/449/control.png)
+![mecanum](images/control.png)
 
 
 ## Sources
