@@ -1,5 +1,10 @@
 This was the final project of Northwestern University's ME449 Robotic Manipulation class. This project involves planning a trajectory for a KUKA youBot mobile manipulator to pick up a block at a specified position and orientation, and place the block at a different position and orientation. The KUKA youBot has a 4 mecanum wheels on it's base with a 5-dof arm.
 
+
+## Video Demo
+https://www.youtube.com/embed/INRJ8Y_SD4U
+
+
 ## Trajectory Planning
 The trajectory is composed of 8 parts:
 
